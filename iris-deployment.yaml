@@ -1,10 +1,10 @@
-apiVersion: "serving.kserve.io/v1beta1"
-kind: "InferenceService"
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
 metadata:
-  name: "sklearn-iris"
   annotations:
-    serving.kserve.io/deploymentMode: "RawDeployment"
+    serving.kserve.io/deploymentMode: RawDeployment
+  name: sklearn-iris
 spec:
   predictor:
     sklearn:
-      storageUri: "s3://aws-dvc-2025/models/sklearn-iris"
+      storageUri: s3://aws-dvc-2025/models/iris/7fd3005e4a29445c8c16247a38ed70fa
